@@ -19,20 +19,20 @@ Your task is to use this data to make a model capable of making predictions. Thi
 
 You have several options for the model to build:
 
-#### Option A: Predict the next month's income
+### Option A: Predict the next month's income
 
 Set up a prediction function that takes a list of transactions and an account and ouputs a prediction for the aggregated next monthly income. 
 
-#### Option B: Predict the next week's outgoing
+### Option B: Predict the next week's outgoing
 
 Set up a prediction function that takes a list of transactions and an account and ouputs a prediction for the aggregated next weekly outgoing. 
     
-#### Option C: Detect outlier accounts
+### Option C: Detect outlier accounts
 
 Set up a prediction function that takes a list of transactions and an account and returns a prediction of "closeness" to the rest of the accounts. This is a more open-ended question and we make no guarantees that the data provided does or does not already contain outliers. If you opt for building this model, we expect you to provide plots showing the outliers vs non-outliers.
 
 
-#### For all options:
+### For all options:
 
 The preprocessing/algorithms/loss functions are yours to decide, as well as the separation between train/validation/test set. 
 
@@ -41,7 +41,7 @@ Specific design choices must be justified, whether that be qualitatively through
 Tip: By combining the transactions and accounts data you should be able to map the balance of the account through time (back to the oldest transaction date for the account). This information might be useful depending on what you choose to predict.
 
 
-##What we expect:
+## What we expect:
 
 - Use of Python (3.6+)
 - Clearly documented code or explanations with each function. **You need to be able to justify your design choices** - from data processing to algorithnm decisions.
