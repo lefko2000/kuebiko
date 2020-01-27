@@ -38,18 +38,20 @@ The preprocessing/algorithms/loss functions are yours to decide, as well as the 
 
 Specific design choices must be justified, whether that be qualitatively through plots or quantitatively through metrics. We want you to show us how good is your solution.
 
-Tip: By combining the transactions and accounts data you should be able to map the balance of the account through time (back to the oldest transaction date for the account). This information might be useful depending on what you choose to predict.
+Tip: By combining the transactions and accounts data you should be able to reverse the balance of the account back through time (back to the oldest transaction date for the account). This information might be useful depending on what you choose to predict.
 
 
 ## What we expect:
 
 - Use of Python (3.6+)
 - Clearly documented code or explanations with each function. **You need to be able to justify your design choices** - from data processing to algorithnm decisions.
-- Use of the FastAPI format for routes and for serving your prediction model and use of pydantic for input/output validation
-- Unitesting where possible.  
+- Use of the FastAPI format for routes and for serving your prediction model and use of pydantic/typing for input/output validation
+- Unitesting where possible
 
 
 You can use whatever other external software libraries you think are appropriate. Pandas/numpy/scikit-learn are encouraged! Please don't spend more than 4-6 hours on this test.
+
+Your solution must be able to run and respond to requests. You can imagine it as a micro-service that could be run independently on a server. Additional notebooks, analysis or plots to accompany your model will be very welcomed!
 
 We look forward to your solution 🙂
 
@@ -57,4 +59,4 @@ We look forward to your solution 🙂
 
 Kuebiko is the japanese god of knowledge. Early on in our creation, we took to naming our "katas" or coding challenges after japanese mythology. 
 
-We hope to challenge you as you will be challenged in your work at Mansa and so designed this test with this in mind. It is important to us to gather feedback on this process as well, and so please don't hesitate to make it known. 
+We hope to challenge you as you will be challenged in your daily work at Mansa and so designed this test with this in mind. It is important to us to gather feedback on this process as well, and so please don't hesitate to let us know what you think!
