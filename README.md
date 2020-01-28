@@ -15,15 +15,22 @@ Provided with this repo is also a `main.py` file with a minimal [FastAPI](https:
 
 ## The Task
 
-Your task is to use this data to make a model capable of making predictions. This model should then be served through the small [FastAPI](https://fastapi.tiangolo.com/) file provided. Feel free to extend the or split the file as needed.
+Your task is to use this data to make a model capable of making predictions. There are three options for models that you can build - pick and implement the one you feel is more fun. 
+
+Your model should then be served through the small [FastAPI](https://fastapi.tiangolo.com/) file provided. Feel free to extend the or split the file as needed.
+
+### Before you pick a model/approach:
+We suggest you take a look and explore the data. Since it is real data, is is noisy and sparse. Some columns such as dates might need to be parsed as such. 
+
+Build a function to check which accounts have more than 180 days of history - you can discard the others for in your models and analysis. *You can assume that any accounts/transactions passed to your service will have at least 6 months of history.*
 
 You have several options for the model to build:
 
-### Option A: Predict the next month's income
+### Option A: Predict the next month's income given the past six months
 
 Set up a prediction function that takes a list of transactions and an account and ouputs a prediction for the aggregated next monthly income. 
 
-### Option B: Predict the next week's outgoing
+### Option B: Predict the next week's outgoing given the past 3 months (12 weeks)
 
 Set up a prediction function that takes a list of transactions and an account and ouputs a prediction for the aggregated next weekly outgoing. 
     
