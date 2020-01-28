@@ -22,7 +22,7 @@ Your model should then be served through the small [FastAPI](https://fastapi.tia
 ### Before you pick a model/approach:
 We suggest you take a look and explore the data. Since it is real data, is is noisy and sparse. Some columns such as dates might need to be parsed as such. 
 
-Build a function to check which accounts have more than 180 days of history - you can discard the others for in your models and analysis. *You can assume that any accounts/transactions passed to your service will have at least 6 months of history.*
+Build a function to check which accounts have more than 180 days of history - you can discard the others for your models and analysis. *You can assume that any accounts/transactions passed to your service will have at least 6 months of history.*
 
 You have several options for the model to build:
 
