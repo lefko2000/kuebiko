@@ -1,5 +1,7 @@
 # kuebiko - mansa data coding challenge
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 This is the repository for the Mansa Data Science Coding Challenge.
 
 ## Goal:
