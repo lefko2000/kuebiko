@@ -69,7 +69,7 @@ async def root(predict_body: RequestPredict):
 
     # Call your prediction function/code here
     ####################################################
-    predicted_amount = predict(transactions, account)
+    # predicted_amount = predict(transactions, account)
 
     # Return predicted amount along with account id
-    return {"account_id": account.id, "predicted_amount": predicted_amount}
+    return {"account_id": account.id, "predicted_amount": 0}

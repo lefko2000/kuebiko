@@ -75,6 +75,8 @@ df = pd.DataFrame([t.dict() for t in transactions])
 
 This is because the objects passed to the API are using pydantic's `BaseModel` class which allows easy conversion from object to dictonary through the default `.dict()` implementation.
 
+You can test your API using the `test_main.py` file, just make sure you are running the server by calling `uvicorn main:app` in another terminal window.
+
 Don't worry about preprocessing the accounts if you do not use them in your solution.
 
 If you wish to learn more about how to use the FastAPI:
