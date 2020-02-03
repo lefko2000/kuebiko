@@ -30,9 +30,15 @@ You have several options for the model to build:
 
 Set up a prediction function that takes a list of transactions and an account and ouputs a prediction for the aggregated next monthly income. 
 
+Income is defined as the sum of all transactions with the amount `>0` over a certain time-period. So to get the monthly income, you can sum the transactions over monthly periods. 
+
+Tip: It might make more sense to define a month as a 30 day period rather than the month itself since the snapshots can be taken at any point during the month and not necesserilly at the end. Alternatively you could decide to only keep "full" months of transactions in the dataset.  
+
 ### Option B: Predict the next week's outgoing given the past 3 months (12 weeks)
 
 Set up a prediction function that takes a list of transactions and an account and ouputs a prediction for the aggregated next weekly outgoing. 
+
+Outgoing is defined as the sum of all transactions transactions with the amount `< 0` over a certain time-period. So to get the weekly outgoing, you can sum all the negative transactions within a 7 day (or week) period.
     
 ### Option C: Detect outlier accounts
 
@@ -43,22 +49,49 @@ Set up a prediction function that takes a list of transactions and an account an
 
 The preprocessing/algorithms/loss functions are yours to decide, as well as the separation between train/validation/test set. 
 
-Specific design choices must be justified, whether that be qualitatively through plots or quantitatively through metrics. We want you to show us how good is your solution.
+Specific design choices must be justified, whether that be qualitatively through plots or quantitatively through metrics. We want you to show us how good is your solution. As long as you can justify choices, we trust you in the implementation 🛠
 
 Tip: By combining the transactions and accounts data you should be able to reverse the balance of the account back through time (back to the oldest transaction date for the account). This information might be useful depending on what you choose to predict.
 
+
+### Serving your solution through FastAPI
+
+Once you have a model implemented which can predict the given output, we would like you to try to serve it in the API file provided (`main.py`).
+ 
+This requires you to move your preprocessing to a function which you can call any input on. **You do not have to worry about validating the inputs - FastAPI will do this for you!**
+
+You can then move your predict functionality to the `predict` function and return the predicted amount.
+ 
+
+If you use `pandas`, you can convert the `transactions` (`List[Transaction]`) passed to the API to a `pd.DataFrame` by calling:
+
+```python
+import pandas as pd 
+
+df = pd.DataFrame([t.dict() for t in transactions])
+``` 
+
+This is because the objects passed to the API are using pydantic's `BaseModel` class which allows easy conversion from object to dictonary through the default `.dict()` implementation.
+
+Don't worry about preprocessing the accounts if you do not use them in your solution.
+
+If you wish to learn more about how to use the FastAPI:
+
+- [Official FastAPI Docs](https://fastapi.tiangolo.com/)
+- [Official pydantic Docs](https://pydantic-docs.helpmanual.io/)
+- [Medium Post: How to Deploy a Machine Learning Model](https://towardsdatascience.com/how-to-deploy-a-machine-learning-model-dc51200fe8cf)
 
 ## What we expect:
 
 - Use of Python (3.6+)
 - Clearly documented code or explanations with each function. **You need to be able to justify your design choices** - from data processing to algorithnm decisions.
-- Use of the FastAPI format for routes and for serving your prediction model and use of pydantic/typing for input/output validation
-- Unitesting where possible
+- Use of the FastAPI format for routes and for serving your prediction model and use of pydantic/typing for input/output validation (this is free 😉)
 
+We are not going to penalize you for accuracy, we care about getting to know your thought proccess, decision making and data science reflexes!
 
 You can use whatever other external software libraries you think are appropriate. Pandas/numpy/scikit-learn are encouraged! Please don't spend more than 4-6 hours on this test.
 
-Your solution must be able to run and respond to requests. You can imagine it as a micro-service that could be run independently on a server. Additional notebooks, analysis or plots to accompany your model will be very welcomed!
+Your solution must be able to run and respond to requests (it can take as long to calculate as you want). You can imagine it as a micro-service that could be run independently on a server. Additional notebooks, analysis or plots to accompany your model will be very welcomed!
 
 We look forward to your solution 🙂
 
