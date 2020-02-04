@@ -11,7 +11,7 @@ To test your ability to deal with time-series data, building a model, and servin
 
 ## Details:
 
-You will find two `csv` files containing real anonymized data from transactions and accounts. The `transactions.csv` contains a set of transactions with an amount (in eur) and the date of the day they were added. The `accounts.csv` contains a list of balances for the accounts that the transactions pertain to. 
+In the `data` folder, you will find two `csv` files containing real anonymized data from transactions and accounts. The `transactions.csv` contains a set of transactions with an amount (in eur) and the date of the day they were added. The `accounts.csv` contains a list of balances for the accounts that the transactions pertain to. 
 
 Provided with this repo is also a `main.py` file with a minimal [FastAPI](https://fastapi.tiangolo.com/) demo. Once you have installed the `requirements.txt` in your python environment you will be able to run the main file by simply calling `uvicorn main:app` inside your directory. This should start the local server and you should be able to see the automatically generated API docs at `http://127.0.0.1:8000/docs`. 
 
