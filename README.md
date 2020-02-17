@@ -19,7 +19,7 @@ Provided with this repo is also a `main.py` file with a minimal [FastAPI](https:
 
 Your task is to use this data to make a model capable of making predictions. There are three options for models that you can build - pick and implement the one you feel is more fun. 
 
-Your model should then be served through the small [FastAPI](https://fastapi.tiangolo.com/) file provided. Feel free to extend the or split the file as needed.
+Your model should then be served through the small [FastAPI](https://fastapi.tiangolo.com/) file provided. Feel free to extend it or split the file as needed.
 
 ### Before you pick a model/approach:
 We suggest you take a look and explore the data. Since it is real data, is is noisy and sparse. Some columns such as dates might need to be parsed as such. 
@@ -34,7 +34,7 @@ Set up a prediction function that takes a list of transactions and an account an
 
 Income is defined as the sum of all transactions with the amount `>0` over a certain time-period. So to get the monthly income, you can sum the transactions over monthly periods. 
 
-Tip: It might make more sense to define a month as a 30 day period rather than the month itself since the snapshots can be taken at any point during the month and not necesserilly at the end. Alternatively you could decide to only keep "full" months of transactions in the dataset.  
+Tip: It might make more sense to define a month as a 30 day period rather than the month itself since the snapshots can be taken at any point during the month and not necessarily at the end. Alternatively you could decide to only keep "full" months of transactions in the dataset.  
 
 ### Option B: Predict the next week's outgoing given the past 3 months (12 weeks)
 
@@ -79,7 +79,7 @@ You can test your API using the `test_main.py` file, just make sure you are runn
 
 Don't worry about preprocessing the accounts if you do not use them in your solution.
 
-If you wish to learn more about how to use the FastAPI:
+If you wish to learn more about how to use FastAPI:
 
 - [Official FastAPI Docs](https://fastapi.tiangolo.com/)
 - [Official pydantic Docs](https://pydantic-docs.helpmanual.io/)
@@ -91,7 +91,7 @@ If you wish to learn more about how to use the FastAPI:
 - Clearly documented code or explanations with each function. **You need to be able to justify your design choices** - from data processing to algorithnm decisions.
 - Use of the FastAPI format for routes and for serving your prediction model and use of pydantic/typing for input/output validation (this is free 😉)
 
-We are not going to penalize you for accuracy, we care about getting to know your thought proccess, decision making and data science reflexes!
+We are not going to penalize you for accuracy, we care about getting to know your thought process, decision making and data science reflexes!
 
 You can use whatever other external software libraries you think are appropriate. Pandas/numpy/scikit-learn are encouraged! Please don't spend more than 4-6 hours on this test.
 
