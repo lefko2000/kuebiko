@@ -97,6 +97,12 @@ You can use whatever other external software libraries you think are appropriate
 
 Your solution must be able to run and respond to requests (it can take as long to calculate as you want). You can imagine it as a micro-service that could be run independently on a server. Additional notebooks, analysis or plots to accompany your model will be very welcomed!
 
+
+#### To Submit
+
+Send an email to: gautier.daganATgetmansa.com, remy.tincoATgetmansa.com and benjamin.cambierATgetmansa.com. 
+
+You can send us a github link to your solution (preferred) or a zipped file with your code and explanations.
 We look forward to your solution 🙂
 
 ### Why kuebiko ?
